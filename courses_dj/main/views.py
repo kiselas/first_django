@@ -4,7 +4,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('<h4>Проверка работы Index</h4>')
+    return render(request, 'main/index.html', {'title': 'Главная страница'})
 
 def about(request):
-    return HttpResponse('<h4>Проверка работы About</h4>')
+    return render(request, 'main/about.html')
