@@ -5,9 +5,10 @@ body {
 aside {
     float: left;
     background: #181818;
+    min-width: 300px;
     width: 20%;
     padding: 2.5%;
-    height: 100vh;
+    height: 150vmin;
     color: #fff;
     border-right: 5px solid #4d4d4d;
 }
@@ -51,13 +52,86 @@ aside ul li:hover, aside ul a {
     transform: scale(1.05);
 }
 
+body {
+    background:  url(../img/back.png) repeat;
+}
+
 main .features {
     float: left;
     color: #fff;
-    margin-top: 100px;
-    text-align: center;
-    width: 75%;
+    margin-top: 35px;
+    width: 64%;
 }
 
-main .features h1 {font-size: 50px}
+main .features h1 {
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);
+    max-width: 400px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
 main .features p {max-width: 400px; margin: 20px auto}
+
+.alert-warning {
+    float: left;
+    width: 35%;
+    height: 300px;
+    margin: 10px;
+    text-align: left;
+    background: gray;
+    color: white;
+}
+ul {
+        font: 14px Verdana, Geneva, sans-serif;
+        overflow: hidden;
+}
+
+ul li.left {
+    width: 26vw;
+    height: 320px;
+    float: left;
+    list-style: none;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    background-color:#ffffff26;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+ul li.right {
+    width: 20%;
+    float: right;
+    text-align: right;
+}
+ul li.center {
+    text-align: center;
+}
+ul li .content {
+
+    display: inline-block;
+    text-align: left;
+
+    /* эмуляция inline-block для IE6-7*/
+/ / display: inline;
+/ / zoom: 1;
+}
+
+.btn-info {
+    background-color: gray !important;
+    border: none;
+    border-radius: 15px;
+    color: #dadada;
+}
+
+.btn-warning {
+    background-color: gray !important;
+    border: none;
+    border-radius: 15px;
+    color: #dadada;
+}
+
+.add_form {
+    width:50%;
+}
+.form-control {
+    margin-bottom: 15px;
+}
