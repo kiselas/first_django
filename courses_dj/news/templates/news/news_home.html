@@ -11,8 +11,9 @@
             {% for e in news %}
                     <li class="left">
                         <div class="content"><h3>{{ e.title }}</h3>
-                        <p>{{ e.anonse }}</p>
-                        <button class="btn btn-warning">Читать полностью</button></div>
+                            <p>{{ e.anonse }}</p>
+                            <a class="btn btn-warning" href="{% url 'news-detail' e.id %}">Читать полностью</a>
+                        </div>
                     </li>
             {% endfor %}
         {% else  %}

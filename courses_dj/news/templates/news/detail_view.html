@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} Новости на сайте{% endblock %}}
+
+{% block content%}
+    <div class="features">
+        <h1 id="article_title">{{ article.title }}</h1>
+        <p id="article_date">{{ article.date }}</p>
+        <p id="article_fulltext">{{ article.full_text }}</p>
+        <a class="btn btn-warning" href="{% url 'news-update' article.id %}"><i class="fas fa-edit"></i>Редактировать</a>
+        <a class="btn btn-warning" href="{% url 'news-delete' article.id %}"><i class="fas fa-trash-alt"></i>Удалить</a>
+
+    </div>
+{% endblock %}
